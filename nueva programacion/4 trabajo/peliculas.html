@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>peliculas</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>PELICULAS</h1>
+
+    <h2>seleccione la pelicula segun la edad</h2>
+
+    <h2>ingrese su edad <input type="number" id="edad" min="0"></h2>
+
+    <br><br>
+
+    <h3>seleccione el genero</h3>
+
+    <button onclick="generos_pelicula('terror')">Terror</button>
+    <button onclick="generos_pelicula('romance')">Romance</button>
+    <button onclick="generos_pelicula('comedia')">Comedia</button>
+
+    <h1>LA PELICULA RECOMENDADA ES &reg; &reg; &reg;</h1>
+
+    <h2>imagen</h2>
+     <img src="terror.jpg" id="imagen1" height="350px" width="600px" border="5">
+
+     <script>
+        function generos_pelicula(seleccion_de_pelicula){
+            let edad_persona = document.getElementById("edad").value;
+            let mensaje_web = document.getElementById("mensaje");
+            let imagen_dinamica = document.getElementById("imagen");
+
+            switch(seleccion_de_pelicula){
+                case 'terror':
+                    if (edad_persona<=10){
+                        mensaje_web.textContent = "call of the dead";
+                        imagen_dinamica.src = "terror.jpg"
+                    }
+                    else{
+                        if(edad_persona<=17){
+                            mensaje_web.textContent = "niño y niña en el frio";
+                            imagen_dinamica.src = "romance.jpg"
+                        }
+                    }
+                    break;
+                case 
+            }
+        }
+
+
+     </script>
+
+    
+</body>
+</html>

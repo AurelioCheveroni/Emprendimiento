@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    ><title>Ejercicio de EDADES</title>
+</head>
+<body>
+    <h1> Ingrese su edad</h1>
+    <input type="number" id="numero"> <br><br>
+
+    <button onclick="el_boton()"> Calcular</button>
+    <h2> Usted es un <span id ="espacio"></span> </h2>
+
+    <script>
+        function el_boton(){   
+            let edad=document.getElementById("numero").value;
+            let respuesta= document.getElementById("espacio");
+
+
+            if(edad<0){
+                respuesta.textContent="###ERROR###";
+             } else
+                    if (edad<=3){
+                    respuesta.textContent=" BEBE ";
+                }  else{
+                    if(edad<=10){
+                        respuesta.textContent="NIÑO";
+                    }else{
+                        if(edad<=17){
+                            respuesta.textContent="ADOLESCENTE";
+                        }else{
+                            if(edad<=30){
+                                respuesta.textContent="ADULTO";
+                            }else{
+                                if(edad<=50)S
+                                respuesta.textContent="VETERANO";
+                            }
+                        }
+                    }
+                
+
+           
+           
+           
+            }
+
+
+        
+
+        }
+    </script>
+</body>
+

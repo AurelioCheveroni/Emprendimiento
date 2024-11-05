@@ -1,0 +1,239 @@
+
+*{
+  margin: 0;
+}
+body{
+  background-color: black
+}
+.ay{
+  height: 25px;
+}
+a{ 
+  text-decoration: none;
+  color: black;
+ }
+ header{
+  display: flex; /*mejora un poco el nav de ser mas accesible*/
+  justify-content: space-between;  /*espacio entre los 3 selectores*/
+  height: 90px;
+  background-color:  white;
+  font-family: sans-serif;
+  align-items: center;  /*alineacion de los 3 selectores en el centro*/
+  
+ }  
+ .logo{  
+  display: flex; /*pega el logo con el item del titulo*/
+  align-items: center; /*alinea al centro*/
+  margin-right: 10px;   /*movimiento a la derecha*/
+ } 
+ .logo h2 b{
+  color: rgb(135, 93, 255);
+}
+ .logo img{
+  height: 90px;
+  margin-right: 20px;
+ }
+ nav a{
+  font-weight: 600;  /*aumento de margen*/
+  padding-right: 80px;  /*movimiento de separacion de los 3 selecciones*/
+ } 
+ .selec{
+  color: white;
+ }
+ 
+.car{
+    text-align: center;
+    background-color:rgb(135, 93, 255);
+    font-size: 30px; /*tipo de tamaño*/
+    font-family: "Outfit", system-ui;
+    margin-top: 25px;
+}
+
+.contenedor button {
+      position: relative;
+      padding: 10px 15px;
+      border: none;  /*borde de los botones*/
+      outline: none; 
+      background: rgb(135, 93, 255);
+      color: hsl(0, 0%, 100%);  /*interacion visual al no poner el cursor en el boton*/
+      transition: .05s;    
+      overflow: hidden;  /*Para que los span no se salgan del boton*/
+      float: left;      /*union de botones para que todos se muevan a la izq*/
+      margin: 30px;     /*espacio en los botones*/
+      font-size: 35px;    /*tamaño de lo los botones*/
+      font-family: "Outfit", system-ui;  /*tipo de letra */
+
+  }
+  .contenedor{  /*disposicion del conjunto de botones*/
+    margin-left: 100px;   /*movimiento de espacios al lado izq. (al aumentar baja el de abajo) */
+    margin-right: 600PX;   /*movimiento del espacio al der. (al aumentar baja el de arriba)*/
+   display:flex;  /*esto hace que los botones se unan y no se distribullan*/
+   flex-direction: column;  /*asigna los botones en forma de columna*/
+   align-items: center;  /*x*/
+   justify-content: space-around;  /*x*/  
+   margin-top: 20px;  /*espacio donde los botones se alejan del techo*/
+   }
+   
+  .conjunto{  /*capsula donde se encuentra carucel y botones*/
+    display: flex;  /*une el carucel y los botones en un div individual*/
+    flex-direction: row;  /*x*/
+    align-items: center;  /*x*/
+    margin-top: 25px;
+  }
+  
+  button:hover {  /*al poner el cursos alumbra las letras dentro del boton*/
+    color: rgb(255, 255, 255);
+  }
+  
+  button span {          /*la animacion de cierre a fuera de los botones*/
+    position: absolute;  
+    background: rgb(255, 255, 255);
+    transition: .5s;
+  }
+    /*funcion o reglas para lograr la animacion*/
+  button span:nth-child(1) {
+    width:100%;
+    height:1px;
+    top:0;
+    left:-100%;
+  
+  }
+  
+  button span:nth-child(2) {
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right: -100%;
+  
+  }
+  
+  button span:nth-child(3) {
+    width: 1px;
+    height: 100%;
+    bottom: -100%;
+    left: 0%;
+  
+  }
+  
+  button span:nth-child(4) {
+    width: 1px;
+    height: 100%;
+    top: -100%;
+    right: 0%;
+  
+  }
+  
+  button:hover span:nth-child(1) {
+    left: 0;
+  }
+  
+  button:hover span:nth-child(2) {
+    right: 0;
+  }
+  
+  button:hover span:nth-child(3) {
+    bottom: 0;
+  }
+  
+  button:hover span:nth-child(4) {
+    top: 0;
+  }
+
+
+
+/* contenedor principal del carrusel */
+.carousel {
+  width: 900px;     /*tamaño del bloque que almacena las imagenes*/   
+  overflow: hidden;  /*oculta las imagenes para poder mostrar el el bloque principal que es de 1200 y no sobrepasarse*/
+  position: relative;  /*x*/
+  justify-content: flex-end;    /*x*/
+  margin-top: 25px; /*el espacio que hay de las imagenes hacia arriba*/
+}
+
+  
+  /* Estilos de las diapositivas (slides) */
+  .slides {
+    display: flex;   /*union de las imagenes*/
+    width: 1200; /* Porque hay 3 imágenes y eso es lo que miden por foto*/
+    animation: slideAnimation 12s infinite;   /*animacion infinita en la que 3 imagenes giran por 4 segundos hasta formar 12*/
+    transition: transform 0.5    
+  }
+  
+  .slide {   /*div donde ocupan las imagenes*/
+    width: 100%;   
+    flex: 1 0 100%; /* dimenciones del slide es decir el bloque es de 1200 y cada imagen es de 1200 al poner el 50% caben 2 imagenes en el bloque (600px) +++++++++++++++++++++*/
+  }
+  
+  .slide img {   /*las imagenes en el carusel*/
+    width: 100%;  /*tamaño de la imagen*/
+    display: block;  
+  }
+
+  /* Animación para que el carrusel se mueva automáticamente */
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(0%);
+    }
+    30% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    55% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-200%);
+    }
+    100%{transform: translateX(0%);
+    } 
+    /*animacion de las imagenes (investigue mas sobre esto)++++++++++++++++++++++++++++++++*/
+  }
+  .footer{
+    margin-top: 25px;
+    position: relative;
+    background: white;
+    min-height: 40px; /*altura minima*/
+    padding: 15px 40px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*direccion en columnas*/
+}
+.social-icono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+}
+.icon-elem{
+    list-style: none; /*eliminar los puntos de lista al redirigir*/
+}
+.icon{
+    color: rgb(135, 93, 255);
+    font-size: 35px;
+  margin: 5px 10px;
+  transition: 0.3s;
+  text-decoration: none; /*quitar el subrayado*/
+  opacity: 0.5; /*opacidad de un objeto*/
+}
+.icon:hover{
+    transform: translateY(-10px);
+}
+
+.icon:hover{
+    opacity: 1;
+}
+
+.texto{
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}

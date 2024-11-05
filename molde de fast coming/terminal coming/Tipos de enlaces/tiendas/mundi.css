@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+}
+a{ 
+    text-decoration: none;
+    color: black;
+    }
+    .ay{
+        height: 25px;
+    }
+    header{
+    display: flex; /*mejora un poco el nav de ser mas accesible*/
+    justify-content: space-between;  /*espacio entre los 3 selectores*/
+    height: 90px;
+    background-color:  white;
+    font-family: sans-serif;
+    align-items: center;  /*alineacion de los 3 selectores en el centro*/
+    
+    }  
+    .logo{  
+    display: flex; /*pega el logo con el item del titulo*/
+    align-items: center; /*alinea al centro*/
+    margin-right: 10px;   /*movimiento a la derecha*/
+    } 
+    .logo h2 b{
+        color: rgb(135, 93, 255); 
+    }
+    .logo img{
+    height: 90px;
+    margin-right: 20px;
+    }
+    nav a{
+    font-weight: 600;  /*aumento de margen*/
+    padding-right: 80px;  /*movimiento de separacion de los 3 selecciones*/
+    } 
+
+    body{
+        background-color: black;
+    }
+    .conti{
+        margin-left: 200px;
+        margin-top: 70px;
+        background-color: white;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;  /* los elementos estan en horizontal*/
+        gap: 20px; /*espacio entre estos elementos*/
+    }
+
+    .conti-cart{
+        width: 500px;  /*calcula el espacio en 3 objetos*/
+        height: 85%;
+        border-radius: 35px;
+    }
+
+    .conti-cart img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;  /*como se ajustara ese elemento a su cover*/
+    }
+    .titulo{
+        font-size: 40px;
+        text-align: center;
+    }
+    .subt{
+        font-size: 40px;
+        text-align: center;
+    }
+
+
+    .conti-descri{
+        height: 70px;
+    }
+
+
+    .footer{
+        margin-top: 40px;
+        background-color: white;
+        margin-top: 60px;  /*mover cuando el texto se estrelle con la informacion*/
+        position: relative;
+        min-height: 40px; /*altura minima*/
+        padding: 15px 40px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /*direccion en columnas*/
+    }
+    .social-icono{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 10px 5px;
+    }
+    .icon-elem{
+        list-style: none;
+    }
+    .icon{
+        color: rgb(135, 93, 255);
+        font-size: 35px;
+      margin: 5px 10px;
+      transition: 0.3s;
+      text-decoration: none; 
+      opacity: 0.5;
+    }
+    .icon:hover{
+        transform: translateY(-10px);
+    }
+    
+    .icon:hover{
+        opacity: 1;
+    }
+    
+    .texto{
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    

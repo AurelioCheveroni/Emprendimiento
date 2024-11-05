@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>2 numeros</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            font-style: oblique;
+
+        }
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ingresar primer numero</h1>
+    <input type="number" id="caja1">
+
+    <h1>Ingrese segundo numero</h1>
+    <input type="number" id="caja2">
+    <br><br>
+    <button onclick="operacion()">SUMA</button>
+    <button onclick="operacion1()">RESTA</button>
+    <button onclick="operacion2()">DIVI</button>
+    <button onclick="operacion3()">MULTI</button>
+
+
+    <h1>El resultado es: <span id="resultado">***</span></h1>
+
+
+    <script>
+        function operacion_suma(n1,n2){
+            suma_de_numeros = Number(n1) + Number(n2);
+            return suma_de_numeros;
+        }
+        function operacion(){
+            let cajitaone = document.getElementById("caja1").value;
+            let cajitatwo = document.getElementById("caja2").value;
+            let solucion = document.getElementById("resultado");
+            let resultado_nine= operacion_suma(cajitaone,cajitatwo);
+            solucion.textContent = resultado_nine;
+        }
+        function operacion_resta(n1,n2){
+            resta_de_numeros = Number(n1) - Number(n2);
+            return resta_de_numeros;
+        }
+        function operacion1(){
+            let cajitaone1 = document.getElementById("caja1").value;
+            let cajitatwo1 = document.getElementById("caja2").value;
+            let solucion1 = document.getElementById("resultado");
+            let resultado_nine1= operacion_resta(cajitaone1,cajitatwo1);
+            solucion1.textContent = resultado_nine1;
+        }
+        function operacion_divi(n1,n2){
+            divi_de_numeros = Number(n1) / Number(n2);
+            return divi_de_numeros;
+        }
+        function operacion2(){
+            let cajitaone2 = document.getElementById("caja1").value;
+            let cajitatwo2 = document.getElementById("caja2").value;
+            let solucion2 = document.getElementById("resultado");
+            let resultado_nine2= operacion_divi(cajitaone2,cajitatwo2);
+            solucion2.textContent = resultado_nine2;
+        }
+        function operacion_multi(n1,n2){
+            multi_de_numeros = Number(n1) * Number(n2);
+            return multi_de_numeros;
+        }
+        function operacion3(){
+            let cajitaone3 = document.getElementById("caja1").value;
+            let cajitatwo3 = document.getElementById("caja2").value;
+            let solucion3 = document.getElementById("resultado");
+            let resultado_nine3= operacion_multi(cajitaone3,cajitatwo3);
+            solucion3.textContent = resultado_nine3;
+        }
+        
+    </script>
+    
+</body>
+</html>

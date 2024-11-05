@@ -1,0 +1,107 @@
+
+*{
+    margin: 0;
+  }
+  body{
+    background-color: black
+  }
+  .ay{
+    height: 25px;
+  }
+  a{ 
+    text-decoration: none;
+    color: black;
+   }
+   header{
+    display: flex; /*mejora un poco el nav de ser mas accesible*/
+    justify-content: space-between;  /*espacio entre los 3 selectores*/
+    height: 90px;
+    background-color:  white;
+    font-family: sans-serif;
+    align-items: center;  /*alineacion de los 3 selectores en el centro*/
+    
+   }  
+   .logo{  
+    display: flex; /*pega el logo con el item del titulo*/
+    align-items: center; /*alinea al centro*/
+    margin-right: 10px;   /*movimiento a la derecha*/
+   } 
+   .logo h2 b{
+    color: rgb(135, 93, 255);
+  }
+   .logo img{
+    height: 90px;
+    margin-right: 20px;
+   }
+   nav a{
+    font-weight: 600;  /*aumento de margen*/
+    padding-right: 80px;  /*movimiento de separacion de los 3 selecciones*/
+   } 
+   .ojos{
+    margin-top: 50px;
+    align-items: center;
+   }
+   .ojos .boca img{
+    height: 600px;
+   }
+   .boca{
+    margin-left: 400px;
+    margin-top: 70px;
+    background-color: firebrick;
+    margin-right: 436px;
+    border-radius: 10px;
+   }
+
+   
+
+
+
+
+
+
+
+
+   .footer{
+    margin-top: 50px;
+    position: relative;
+    background: white;
+    min-height: 40px; /*altura minima*/
+    padding: 15px 40px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*direccion en columnas*/
+}
+.social-icono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+}
+.icon-elem{
+    list-style: none; /*eliminar los puntos de lista al redirigir*/
+}
+.icon{
+    color: rgb(135, 93, 255);
+    font-size: 35px;
+  margin: 5px 10px;
+  transition: 0.3s;
+  text-decoration: none; /*quitar el subrayado*/
+  opacity: 0.5; /*opacidad de un objeto*/
+}
+.icon:hover{
+    transform: translateY(-10px);
+}
+
+.icon:hover{
+    opacity: 1;
+}
+
+.texto{
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}

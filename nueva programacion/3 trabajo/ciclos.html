@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CICLO SWITCH</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        background-color: chocolate;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: oblique;
+    }
+</style>
+<body>
+    <h1>Precio de las frutas</h1>
+
+
+    <h2>1. Arroz</h2>
+    <h2>2. Pasta</h2>
+    <h2>3. Cepillo de dientes</h2>
+    <h2>4. Carne</h2>
+    <h2>5. Papel Higienico</h2>
+
+
+    <input type="number" id="precio_producto" min="1" max="5">
+    <br> <br>
+    <button onclick="producto()">VER PRECIO</button> 
+    
+
+    <h1>El precio de <span id="mensaje_del_precio">el producto seleccionada es ***</span></h1>
+
+    <script>
+        function producto(){
+            let fruta_de_seleccion = document.getElementById("precio_producto").value;
+            let ciclo = document.getElementById("mensaje_del_precio");
+
+            switch(fruta_de_seleccion)
+            {
+                case "1":
+                    ciclo.textContent="el arroz es $3.500 por paquete";
+                    break;
+
+                    case "2": 
+                    ciclo.textContent="la pasta es $4.500 por paquete";
+                    break;
+
+                    case "3":
+                        ciclo.textContent="el cepillo de dientes es $3.000";
+                        break;
+
+                        case "4": 
+                       ciclo.textContent="la carne es $25.000 el kilo";
+                        break;
+
+                         case "5": 
+                         ciclo.textContent="el papel higienico es $12.000 y trae 10 rollos";
+                         break;
+
+
+
+            }
+        }
+    </script>
+</body>
+</html>

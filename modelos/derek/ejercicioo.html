@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EDADES</title>
+    </head>
+    <body>
+        <h1> QUE EDAD TENEIS?
+
+            <INPUT type="number" id="edad_caja">
+                <br><br>
+
+                <button onclick="calculo_de_edades()">Calcular</button>
+
+                <h2>Tu eres un <span id="texto_web">***</span></h2>
+
+                <script>
+                    function calculo_de_edades(){
+                        let edad= document.getElementById("edad_caja").value;
+                        let texto= document.getElementById("texto_web");
+
+                        if(edad<0){
+                            texto.textContent="### ERROR ## Numero negativo"
+                        } else{
+                            if(edad<=3){
+                                texto.textContent="BEBE"
+                            }else{
+                                if(edad<=10){
+                                    texto.textContent="NIÑO"
+                                }else{
+                                    if(edad<=17){
+                                        texto.textContent="ADOLESCENTE"
+                                    }else{
+                                        if(edad<=30){
+                                            texto.textcontent="ADULTO JOVEN"
+                                        }else{
+                                            if(edad<=50){
+                                                texto.textContent="ADULTO MAYOR"
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                </script>
+
+    </body>
+</html>

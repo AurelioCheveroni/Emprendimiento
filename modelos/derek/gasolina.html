@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head> <Title>Calculadora de gasolina  </Title>
+    <style>
+        body{
+            background-color: blueviolet;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h1{
+            font-size: 20px;
+            color:beige;
+        }
+    
+        button{
+            color:aquamarine;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 24px;
+        }
+    </style>
+
+</head>
+<body> 
+    <h1> CALCULADORA DE GASOLINA POR KILÓMETROS RECORRIDOS</h1>
+    <h1> Ingresar kilometro <input type="number"id="gasolina"></h1>
+    <button onclick = "calculo()">Calcular  </button>
+    <h1>La gasolina consumida es: <span id="respuesta"></span></h1>
+    <script>
+        function calculo1(n1){
+        calculo= Number(n1) * Number (0.08);
+        return calculo 
+      }
+        function calculo(){
+            let km= document.getElementById("gasolina").value;
+            let respuesta= document.getElementById("respuesta");
+            let resultado= calculo1(km);
+            respuesta.textContent=resultado;
+        }
+
+    </script>
+    
+</body>

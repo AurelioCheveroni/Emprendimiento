@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>notas</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: black;
+        }
+        h1{
+            color: red;
+            font-family: cursive
+        }
+        h2{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boletin IE GABO</h1>
+
+    <h2>ESTUDIANTE : <input type="text"></h2>
+    <h2>Ingrese las notas de las asignaturas solicitadas:</h2>
+    <h2>MATEMATICAS: <input type="number" id="nota_ing" min="0" max="5"></h2>
+    <h2>QUIMICA: <input type="number" id="nota_lin" min="0" max="5"></h2>
+    <h2>FISICA: <input type="number" id="nota_dis" min="0" max="5"></h2>
+    <br>
+
+    <h2>Verifique si gano cada materia dando clic:</h2>
+    <button onclick="verificacion()">VERIFICAR</button>
+
+    <h2>MATEMATICAS <span id="ing_mensaje">***</span>con desempeño<span id="ing">*** </span></h2>
+    <h2>QUIMICA <span id="lin_mensaje">***</span>con desempeño<span id="lin">*** </span></h2>
+    <h2>FISICA <span id="dis_mensaje">***</span>con desempeño<span id="dis">*** </span></h2>
+    <script>
+        function verificacion(){
+            let ing= document.getElementById("nota_ing").value;
+            let ing_men= document.getElementById("ing_mensaje");
+            let ing_des= document.getElementById("ing");
+
+            if(ing>=3){
+                if(ing>=4.5){
+                    ing_men.textContent= " ALBERTO EINSTEIN ";
+                    ing_des.textContent= " SUPERIOR";
+                } else{
+                    if(ing>=4){
+                        ing_men.textContent= " MATEMATICO ";
+                        ing_des.textContent= " ALTO";  
+                    }else{
+                        ing_men.textContent= " Aprendis ";
+                        ing_des.textContent= " BASICO";
+                    }
+                }
+            } else{
+                ing_men.textContent= " Pasante ";
+                ing_des.textContent= " BAJO";
+            }
+        { 
+         let lin = document.getElementById("nota_lin").value;
+         let lin_men= document.getElementById("lin_mensaje");
+         let lin_des = document.getElementById("lin");
+
+         if(lin>=3){
+            if(lin>=4.5){
+                lin_men.textContent= " ALQUIMISTA ";
+                lin_des.textContent= " SUPERIOR";
+            } else{
+                if(lin>=4){
+                    lin_men.textContent= " QUIMICO ";
+                    lin_des.textContent= " ALTO";
+                } else {
+                    lin_men.textContent = " NOMENCLARURA ";
+                    lin_des.textContent = " BASICO";
+                }
+            }
+         }else{
+            lin_men.textContent= " calentando puesto ";
+            lin_des.textContent= " BAJO";}
+         }
+         {
+            let dis = document.getElementById("nota_dis").value;
+            let dis_men = document.getElementById("dis_mensaje");
+            let dis_des = document.getElementById ("dis");
+
+            if(dis>=3){
+                if(dis>=4.5){
+                    dis_men.textContent= " SEÑOR GRAVEDAD ";
+                    dis_des.textContent= " SUPERIOR";
+                } else {
+                    if (dis>=4){
+                        dis_men.textContent= " VELOSISTA ";
+                        dis_des.textContent= " ALTO";
+                    } else {
+                        dis_men.textContent= " FISICO ";
+                        dis_des.textContent= " BASICO";
+                    }
+                }
+            }else{
+                dis_men.textContent= " perdiste "
+                dis_des.textContent= " BAJO";
+            }
+
+
+
+
+
+
+
+         }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PELICULAS</title>
+</head>
+<body>
+    <H1>PELICULAS</H1>
+    <h2>Seleccion de peliculas segun su edad</h2>
+
+    <h2>Ingrese su edad <input type="number" id="edad" min="0"></h2>
+
+    <br><br>
+    
+    <h2>Seleccione ahora el genero</h2>
+    <button onclick="generos_peliculas('terror')">Terror</button>
+    <button onclick="generos_peliculas('romance')">Romance</button>
+    <button onclick="generos_peliculas('comedia')">Comedia</button>
+
+    <h1>LA PELICULA RECOMENDADA ES <span id="mensaje">&reg;&reg;&reg;</span></h1>
+
+    <h2>Imagen</h2>
+    <img src="yes.jpg" id="imagen" height="150" width="150" border="10">
+
+
+    <script>
+        function generos_peliculas(seleccion_pelicula){
+            let edad_persona= document.getElementById("edad").value;
+            let mensaje_web= document.getElementById("mensaje");
+            let imagen_dinamica= document.getElementById("imagen");
+
+
+            switch(seleccion_pelicul){
+                case'terror':
+                if (edad_persona<=10){
+                    mensaje_web.textContent= "HOTEL TRANSILVANIA"
+                    imagen_dinamica.src="HT.jpg"
+                }else{
+                    if(edad_persona<=17){
+                        mensaje_web.textContent="LA MALDICION"
+                        imagen_dinamica.src="maldicion.jpg"
+                    }
+                }
+                break
+
+                case'romance':
+                if (edad_persona<=10){
+                    mensaje_web.textContent= "YOUR NAME"
+                    imagen_dinamica.src="name.jpe"
+                }else{
+                    if(edad_persona<=17){
+                        mensaje_web.textContent="ROMPIENDO EL CIRCULO"
+                        imagen_dinamica.src="rg4.jpg"
+                }   }
+            }
+        }
+    
+    </script>
+</body>
+</html>

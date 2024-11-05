@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> LT GASOLINA </title>
+    
+</head>
+<body>
+    <h1>  gasolina x kilometros recorridos </h1>
+    <h2> ingresar kilometro <input type="number"id="gasola"></h2>
+    <button onclick ="calculo()">calculo gasolina</button>
+<h1>la gasolina consumida fue: <span id="respuesta">***</span></h1>
+<script>
+    function calculog(n1){
+       calculo= Number(n1) * Number (0.08);
+       return calculo 
+    }
+    function calculo(){
+        let km =document.getElementById("gasola").value;
+        let respuesta=document.getElementById("respuesta");
+        let vari = calculog (km);
+        respuesta.textContent=vari;
+    }
+</script>
+
+<style>
+    body{
+        font-size: 50px;
+    text-align:center;
+    background-color: black;
+    color: white;
+    background-image: url(OIP.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
+    button{
+        background-color: red;
+        color: black;
+        font-size: 50px;
+    }
+    input{font-size: 50px;}
+    h1{color: red;}
+    h2{color: rgb(0, 0, 0);}
+</style>
+
+</body>
+</html>

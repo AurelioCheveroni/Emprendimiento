@@ -1,0 +1,122 @@
+*{
+    border: 0%;
+    margin: 0;
+}
+body{
+    background-color: black;
+}
+.ay{
+    height: 25px;
+}
+a{ 
+text-decoration: none;
+color: black;
+}
+header{
+display: flex; /*mejora un poco el nav de ser mas accesible*/
+justify-content: space-between;  /*espacio entre los 3 selectores*/
+height: 90px;
+background-color:  white;
+font-family: sans-serif;
+align-items: center;  /*alineacion de los 3 selectores en el centro*/
+
+}  
+.logo{  
+display: flex; /*pega el logo con el item del titulo*/
+align-items: center; /*alinea al centro*/
+margin-right: 10px;   /*movimiento a la derecha*/
+} 
+.logo h2 b{
+    color: rgb(135, 93, 255); 
+}
+.logo img{
+height: 90px;
+margin-right: 20px;
+}
+nav a{
+font-weight: 600;  /*aumento de margen*/
+padding-right: 80px;  /*movimiento de separacion de los 3 selecciones*/
+}
+.baraja{
+    position: relative; /*localizacion relaiva de las cartas*/
+    width: 1825px; /*la dispersion de las cartas*/
+    display: flex; /*para que las cartas queden junticas*/
+    justify-content: center; /*el contenido quede centrado*/
+    /*esto pone a dar saltitos a las fotos aunque el codigo en si es para que esten centrados los contenidos++++++++++++*/
+    padding: 30px;
+
+}
+.baraja .carta{
+    max-width: 300px; /*tamaño determinado de cada carta*/
+    height: 230px; /*altura de cada carta en el nombre*/
+    margin: 30px 10px; /*marguen de la imagen tanto arriba como al lado*/
+    background: white; /*color de la carta*/
+    padding: 20px 15px; /*tamaño de la carta tanto izquierdo y derecha*/
+    display: flex; /*juntito las cartas*/
+    flex-direction: column; /*contenido de la carta para quedar alineado con el transfondo de la carta*/
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);  /*sombras o sombreado al rededor de la carta*/
+    transition: 0.3s ease-in-out; /*una animacion mas fluida*/
+    border-radius: 20px; /*que exquisito unos bordes a unas esquinitas*/
+    text-align: center; /*alinea el nombre*/
+}
+.baraja .carta:hover{
+    height: 360px; /*se puede expresar como la altura al hacer la animacion*/
+}
+.baraja .carta .imgen{
+    position: relative;  /*posicion de todo lo que es la imagen, la carta y la baraja*/
+    width: 260px; /*tamaño de la imagen en la carta*/
+    height: 260px; /*altura del contenido de la carta al parecer queda feo si se reduce*/
+    top: -60px; /*altura de este desde el top para que no se pegue con el nombre e imagen*/
+    left: 20px; /*el center no funciona sin embargo nada me detiene para que sea simetrico*/
+    z-index: 1; /*esto es para que la capa no desaparezca*/
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /*sombreado al rededor de la imagen*/
+}
+.baraja .carta .imgen img{
+    max-width: 100%; /*tamaño de la imagen para que se pueda colocar perfectamente*/
+    border-radius: 6px; /*¡CASI ME SACA UN OJO!  esta muy filoso esas puntas*/
+}
+
+.footer{
+    background-color: white;
+    margin-top: 60px;  /*mover cuando el texto se estrelle con la informacion*/
+    position: relative;
+    min-height: 40px; /*altura minima*/
+    padding: 15px 40px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*direccion en columnas*/
+}
+.social-icono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+}
+.icon-elem{
+    list-style: none;
+}
+.icon{
+    color: rgb(135, 93, 255);
+    font-size: 35px;
+  margin: 5px 10px;
+  transition: 0.3s;
+  text-decoration: none; 
+  opacity: 0.5;
+}
+.icon:hover{
+    transform: translateY(-10px);
+}
+
+.icon:hover{
+    opacity: 1;
+}
+
+.texto{
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}

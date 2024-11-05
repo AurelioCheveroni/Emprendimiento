@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+    <title>Operación de números</title>
+
+    <style>
+        body{
+            background-color: blueviolet;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+        }
+
+        h1{
+            color: white 
+
+        }
+
+        button{
+            background-color:aquamarine;
+            color:black;
+            
+        }
+
+        h2{
+            color: rgb(238, 208, 39);
+            font-size: 22px;
+        }
+
+      
+    </style>
+
+
+</head>
+<body>
+   <center> <h1> Número 1 </h1>
+    <input type="number" id="caja1">
+
+     <h1>  Número 2</h1>
+    <input type="number" id="caja2">
+
+    <br><br>
+
+    <button onclick="ejecucion_suma()">Suma</button> 
+    <button onclick="ejecucion_resta()">Resta</button> 
+    <button onclick="ejecucion_multiplicacion()">Multiplicacion</button> 
+    <button onclick="ejecucion_division()">Division</button> 
+
+    <h1>El resultado es: </h1> <h2><span id="resultado">***</span></h2></center>
+
+
+
+    <script>
+        function suma(n1,n2){
+            suma_numeros= Number(n1)+Number(n2) 
+            return suma_numeros;
+        }
+    
+        function ejecucion_suma(){
+            let n1=document.getElementById("caja1").value;
+            let n2=document.getElementById("caja2").value;
+            let resultado= document.getElementById("resultado");
+            let operacion= suma(n1,n2);
+            resultado.textContent=operacion; 
+        }
+
+        function resta(n1,n2){
+            resta_numeros= Number(n1)-Number(n2) 
+            return resta_numeros;
+        }    
+
+        function ejecucion_resta(){
+            let n1=document.getElementById("caja1").value;
+            let n2=document.getElementById("caja2").value;
+            let resultado= document.getElementById("resultado");
+            let operacion= resta(n1,n2);
+            resultado.textContent=operacion; 
+         }
+
+
+         function Multiplicacion(n1,n2){
+            multiplicacion_numeros= Number(n1)*Number(n2) 
+            return multiplicacion_numeros;
+        }    
+
+        function ejecucion_multiplicacion(){
+            let n1=document.getElementById("caja1").value;
+            let n2=document.getElementById("caja2").value;
+            let resultado= document.getElementById("resultado");
+            let operacion= Multiplicacion(n1,n2);
+            resultado.textContent=operacion; 
+         }
+
+
+         function Division(n1,n2){
+            division_numeros= Number(n1) / Number(n2) 
+            return division_numeros;
+        }    
+
+        function ejecucion_division(){
+            let n1=document.getElementById("caja1").value;
+            let n2=document.getElementById("caja2").value;
+            let resultado= document.getElementById("resultado");
+            let operacion= Division(n1,n2);
+            resultado.textContent=operacion; 
+         }
+
+
+
+
+    
+
+
+
+
+    </script>
+
+
+
+</body>
